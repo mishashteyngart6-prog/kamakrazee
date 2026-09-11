@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KAMAKRAZEE // 2005</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050505;
+    color: #aaa;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px;
+}
+
+a {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#site {
+    width: 900px;
+    margin: auto;
+    min-height: 100vh;
+    background: #080808;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+.top {
+    height: 22px;
+    background: #111;
+    border-bottom: 1px solid #333;
+    padding: 5px 10px;
+    color: #666;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.header {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 30%, #4a0000 0%, #190000 35%, #050505 75%);
+    border-bottom: 3px solid #900000;
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    top: 35px;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 65px;
+    line-height: 65px;
+    color: #aaa;
+    text-shadow:
+        4px 4px 0 #300000,
+        7px 7px 0 #000;
+    transform: skew(-8deg);
+}
+
+.logo span {
+    color: #8b0000;
+}
+
+.subtitle {
+    position: absolute;
+    left: 31px;
+    top: 108px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.cross {
+    position: absolute;
+    right: 45px;
+    top: 35px;
+    width: 80px;
+    height: 100px;
+}
+
+.cross:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    left: 28px;
+    top: 0;
+    background: #550000;
+}
+
+.cross:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    left: 0;
+    top: 30px;
+    background: #550000;
+}
+
+.nav {
+    height: 31px;
+    background: #111;
+    border-bottom: 1px solid #333;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 9px 16px 8px 16px;
+    color: #999;
+    font-weight: bold;
+    font-size: 10px;
+    border-right: 1px solid #333;
+}
+
+.nav a:hover {
+    background: #300000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.marquee {
+    height: 22px;
+    background: #220000;
+    border-bottom: 1px solid #500000;
+    color: #b00000;
+    padding: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 170px 1fr 170px;
+    min-height: 500px;
+}
+
+.sidebar {
+    padding: 10px;
+    background: #0b0b0b;
+}
+
+.left {
+    border-right: 1px solid #292929;
+}
+
+.right {
+    border-left: 1px solid #292929;
+}
+
+.box {
+    margin-bottom: 15px;
+    border: 1px solid #292929;
+    background: #090909;
+}
+
+.box-title {
+    background: #151515;
+    border-bottom: 1px solid #292929;
+    padding: 5px;
+    color: #888;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.box-content {
+    padding: 7px;
+    line-height: 16px;
+}
+
+.box-content a {
+    display: block;
+}
+
+.main {
+    padding: 15px;
+}
+
+.date {
+    color: #555;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0 0 15px 0;
+    color: #aaa;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 31px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px #300000;
+}
+
+.main-photo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 15px 0;
+    border: 1px solid #333;
+}
+
+.text {
+    color: #999;
+    line-height: 18px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #292929;
+    margin: 20px 0;
+}
+
+.footer {
+    height: 60px;
+    border-top: 1px solid #333;
+    background: #0b0b0b;
+    text-align: center;
+    padding-top: 15px;
+    color: #444;
+    font-size: 9px;
+    line-height: 15px;
+}
+
+@media screen and (max-width: 920px) {
+    #site {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .left,
+    .right {
+        display: none;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .cross {
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="site">
+
+    <div class="top">
+        KAMAKRAZEE // EST. 2005 // BEST VIEWED IN 1024x768
+    </div>
+
+    <div class="header">
+
+        <div class="logo">
+            KAMAKRA<span>Z</span>EE
+        </div>
+
+        <div class="subtitle">
+            UNDERGROUND WEB PORTAL
+        </div>
+
+        <div class="cross"></div>
+
+    </div>
+
+    <div class="nav">
+
+        <a href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="media.html">MEDIA</a>
+        <a href="mp3.html">MP3</a>
+        <a href="guestbook.html">GUESTBOOK</a>
+        <a href="links.html">LINKS</a>
+
+    </div>
+
+    <div class="marquee">
+        >>> WELCOME TO KAMAKRAZEE // UNDERGROUND MUSIC // NEW SITE // SIGN THE GUESTBOOK <<<
+    </div>
+
+    <div class="content">
+
+        <div class="sidebar left">
+
+            <div class="box">
+
+                <div class="box-title">
+                    NAVIGATION
+                </div>
+
+                <div class="box-content">
+
+                    <a href="index.html">HOME</a>
+                    <a href="news.html">NEWS</a>
+                    <a href="media.html">MEDIA</a>
+                    <a href="mp3.html">MP3</a>
+                    <a href="guestbook.html">GUESTBOOK</a>
+                    <a href="links.html">LINKS</a>
+
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="box-title">
+                    SITE STATUS
+                </div>
+
+                <div class="box-content">
+
+                    SITE ONLINE<br>
+                    MP3: ONLINE<br>
+                    GUESTBOOK: ONLINE<br>
+                    WEBMASTER: ONLINE
+
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="box-title">
+                    WEBRING
+                </div>
+
+                <div class="box-content">
+
+                    &lt;&lt; PREV<br>
+                    RANDOM<br>
+                    NEXT &gt;&gt;
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="main">
+
+            <div class="date">
+                09 / 10 / 2005 — 03:17 AM
+            </div>
+
+            <h1>
+                WELCOME TO KAMAKRAZEE
+            </h1>
+
+            <img
+                src="https://i.pinimg.com/736x/84/bc/2d/84bc2d6efff122e67de93edac7f761f3.jpg"
+                alt="KAMAKRAZEE"
+                class="main-photo"
+            >
+
+            <div class="text">
+
+                Welcome to the KAMAKRAZEE website.
+
+                <br><br>
+
+                This is an underground music website
+                built like something that would have existed
+                around 2005.
+
+                <br><br>
+
+                Low resolution images.
+                Black backgrounds.
+                Red links.
+                MP3 downloads.
+                Guestbooks.
+                Broken links.
+                Everything is under construction.
+
+                <br><br>
+
+                KAMAKRAZEE is an underground project
+                built for the people who still remember
+                the old internet.
+
+                <br><br>
+
+                Stay underground.
+
+            </div>
+
+            <hr>
+
+            <span class="date">
+                posted by webmaster // comments: 13
+            </span>
+
+        </div>
+
+
+        <div class="sidebar right">
+
+            <div class="box">
+
+                <div class="box-title">
+                    STATUS
+                </div>
+
+                <div class="box-content">
+
+                    ● WEBSITE ONLINE<br>
+                    ● MP3 SERVER ONLINE<br>
+                    ● GUESTBOOK ONLINE
+
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="box-title">
+                    SHOUTBOX
+                </div>
+
+                <div class="box-content">
+
+                    <b>user666:</b><br>
+                    sick site<br><br>
+
+                    <b>deadboy:</b><br>
+                    new track soon?
+
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="box-title">
+                    LINKS
+                </div>
+
+                <div class="box-content">
+
+                    <a href="links.html">HAUNTED SITES</a>
+                    <a href="links.html">UNDERGROUND</a>
+                    <a href="links.html">WEBRINGS</a>
+                    <a href="links.html">FRIENDS</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+
+        KAMAKRAZEE © 2005–2026<br>
+        THIS WEBSITE IS ALWAYS UNDER CONSTRUCTION
+
+    </div>
+
+</div>
+
+</body>
+</html>
